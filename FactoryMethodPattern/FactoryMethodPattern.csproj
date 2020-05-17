@@ -43,6 +43,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Companys\Company2.cs" />
+    <Compile Include="Companys\Company3.cs" />
+    <Compile Include="Companys\Company1.cs" />
+    <Compile Include="Companys\CompanyFactory.cs" />
+    <Compile Include="Enum\Company.cs" />
+    <Compile Include="Intefaces\ICompany.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

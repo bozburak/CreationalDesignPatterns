@@ -2,13 +2,13 @@
 
 namespace SingletonPattern
 {
-    public class Singleton
+    internal class Singleton
     {
         private static Singleton _instance = null;
 
         private Singleton() => Expression.Empty();
 
-        public static Singleton Instance
+        internal static Singleton Instance
         {
             get
             {
