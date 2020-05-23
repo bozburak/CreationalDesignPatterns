@@ -1,8 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using AbstractFactoryPattern.Abstracts;
+using AbstractFactoryPattern.Classes;
+using System;
 
 namespace AbstractFactoryPattern
 {
@@ -10,6 +8,11 @@ namespace AbstractFactoryPattern
     {
         static void Main(string[] args)
         {
+            Caching cemCaching = new MemCaching();
+            cemCaching.Cache();
+            Caching redisCaching = new RedisCaching();
+            redisCaching.Cache();
+            Console.ReadKey();
         }
     }
 }
