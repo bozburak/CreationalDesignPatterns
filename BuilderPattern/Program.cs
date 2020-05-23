@@ -1,4 +1,5 @@
 ﻿using BuilderPattern.Abstracts;
+using BuilderPattern.Model;
 using BuilderPattern.Models;
 using System;
 
@@ -9,20 +10,22 @@ namespace BuilderPattern
         static void Main(string[] args)
         {
             BrowserDirector browserDirector = new BrowserDirector();
-            var builderChrome = new Chrome();
-            browserDirector.GenerateBrowser(builderChrome);
-            var builderFirefox = new Firefox();
-            browserDirector.GenerateBrowser(builderFirefox);
+            var chromeModel = browserDirector.GenerateBrowser(new Chrome());
+            Console.WriteLine(chromeModel.Name + " - " + chromeModel.Version);
+            var firefoxModel = browserDirector.GenerateBrowser(new Firefox());
+            Console.WriteLine(firefoxModel.Name + " - " + firefoxModel.Version);
             Console.ReadKey();
         }
     }
 
     class BrowserDirector
     {
-        public void GenerateBrowser(BrowserBuilder browserBuilder)
+        public BrowserModel GenerateBrowser(BrowserBuilder browserBuilder)
         {
             browserBuilder.GetBrowserName();
             browserBuilder.GetBrowserVersion();
+            var resultModel = browserBuilder.Build();
+            return resultModel;
         }
     }
 }

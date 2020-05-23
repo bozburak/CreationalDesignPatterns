@@ -1,18 +1,25 @@
 ﻿using BuilderPattern.Abstracts;
-using System;
+using BuilderPattern.Model;
 
 namespace BuilderPattern.Models
 {
     class Firefox : BrowserBuilder
     {
+        BrowserModel browserModel = new BrowserModel();
         public override void GetBrowserName()
         {
-            Console.WriteLine("Firefox");
+            browserModel.Name = "Firefox";
         }
 
         public override void GetBrowserVersion()
         {
-            Console.WriteLine("2.0");
+            browserModel.Version = "1.0";
         }
+
+        public override BrowserModel Build()
+        {
+            return browserModel;
+        }
+
     }
 }

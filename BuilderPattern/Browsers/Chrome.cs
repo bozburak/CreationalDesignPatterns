@@ -1,18 +1,24 @@
 ﻿using BuilderPattern.Abstracts;
-using System;
+using BuilderPattern.Model;
 
 namespace BuilderPattern.Models
 {
     class Chrome : BrowserBuilder
     {
+        BrowserModel browserModel = new BrowserModel();
         public override void GetBrowserName()
         {
-            Console.WriteLine("Chrome");
+            browserModel.Name = "Chrome";
         }
 
         public override void GetBrowserVersion()
         {
-            Console.WriteLine("1.0");
+            browserModel.Version = "1.0";
+        }
+
+        public override BrowserModel Build()
+        {
+            return browserModel;
         }
     }
 }

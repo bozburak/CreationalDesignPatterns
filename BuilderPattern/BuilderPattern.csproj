@@ -46,6 +46,7 @@
     <Compile Include="Abstracts\BrowserBuilder.cs" />
     <Compile Include="Browsers\Chrome.cs" />
     <Compile Include="Browsers\Firefox.cs" />
+    <Compile Include="Model\BrowserModel.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
