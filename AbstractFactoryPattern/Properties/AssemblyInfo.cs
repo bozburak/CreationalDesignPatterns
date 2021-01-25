@@ -8,9 +8,9 @@ using System.Runtime.InteropServices;
 [assembly: AssemblyTitle("AbstractFactoryPattern")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("Turkcell Iletisim Hizmetleri A.S.")]
+[assembly: AssemblyCompany("")]
 [assembly: AssemblyProduct("AbstractFactoryPattern")]
-[assembly: AssemblyCopyright("Copyright © Turkcell Iletisim Hizmetleri A.S. 2020")]
+[assembly: AssemblyCopyright("")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 
